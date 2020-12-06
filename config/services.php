@@ -32,7 +32,7 @@ return [
 
     // Config TMDB
     'tmdb' => [
-        'token' => env('TMDB_TOKEN')
+        'token' => env('TMDB_TOKEN', 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ODY5YjkwMWY2ZWIyZWE3YzI1ODBhZmYyZmRmYjMzOCIsInN1YiI6IjVmY2NkMmJiY2FkYjZiMDAzZjFiNjUxOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wLf0DRuSl_AxDEKad2NwRjYinGD0RG5nI5WATn_xrP8')
     ],
 
 ];
