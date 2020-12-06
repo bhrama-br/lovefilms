@@ -35,6 +35,18 @@
   </header>
   @yield('content')
 
+
+  <footer>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            Used TMDb API.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!-- Scripts -->
   <script src="{{ asset('js/jquery.js') }}"></script>
   <script src="{{ asset('js/app.js') }}" defer></script>
