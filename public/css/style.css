@@ -1,0 +1,145 @@
+/* verde 334747 */
+/* Vermelho d41717 */
+a{
+  text-decoration: none !important;
+}
+
+section {
+  padding: 40px 0;
+}
+.title-popular {
+    font-weight: bold;
+    font-size: 19px;
+    color: #334747;
+}
+
+.logo {
+    width: 100px;
+}
+.bg-dark {
+    background-color: #334747 !important;
+}
+
+.link-card .card-img {
+    height: 380px;
+    overflow: hidden;
+}
+
+
+.link-card img {
+    transition: all 0.4s;
+}
+.link-card:hover img {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.link-card:hover{
+  text-decoration: none;
+}
+.link-card .card-title{
+    font-size: 17px;
+    color: #334747;
+    font-weight: 800;
+}
+.link-card .card-text{
+  font-size: 13px;
+  color: black;
+}
+.link-card .card-star{
+  font-size: 10px;
+  color: #334747;
+}
+.link-card p{
+  margin-bottom:0;
+}
+.link-card i{
+  color:#ed8936;
+}
+
+.star i{
+  color:#ed8936;
+}
+.star{
+  color: #334747;
+  font-size:13px;
+}
+.title{
+  font-size: 20px;
+  color: #334747;
+}
+
+.sobre {
+    font-size: 16px;
+}
+.name {
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: bold;
+    color: 334747;
+}
+.prof {
+    font-size: 14px;
+    color: 334747;
+}
+
+.btn-love {
+  background: #334747;
+  border: 0;
+}
+.btn-love:hover{
+  background: #537373;
+  border: 0;
+}
+
+button.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #d41717;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+#cast{
+  background: #ccc;
+}
+.cart-prota{
+  position: relative;
+}
+
+.cart-prota .cart-image{
+  height: 400px;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.cart-prota .cart-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+#cast a:hover .cart-image::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #33474757;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+}
+
+.name-protagonist {
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #334747;
+    font-weight: bold;
+}
+.papel-protagonist {
+    font-size: 12px;
+    color: #334747;
+}
