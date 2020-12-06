@@ -10,7 +10,13 @@
         @if(count($search) > 0)
           @foreach ($search as $s)
             <div class="col-md-4 mb-3">
-              <a href="{{ route('movies.show', $s['id']) }}" class="link-card">
+              @if ($s['media_type'] == 'person')
+                <a href="{{ route('author.show', $s['id']) }}" class="link-card">
+              @elseif ($s['media_type'] == 'tv')
+                <a href="{{ route('tv.show', $s['id']) }}" class="link-card">
+              @else
+                <a href="{{ route('movies.show', $s['id']) }}" class="link-card">
+              @endif
                 <div class="card">
                   <div class="card-img">
                     <img src="{{ $s['poster_path'] }}" class="card-img-top" alt="Titulo">

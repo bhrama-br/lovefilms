@@ -6,15 +6,15 @@
       <div class="row">
         <div class="col-md-12 mb-3">
           <small>Share:</small>
-          <a href="https://www.facebook.com/sharer/sharer.php?u={{route('movies.show', $movie['id'])}}" class="facebook" target="_blank">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{route('tv.show', $movie['id'])}}" class="facebook" target="_blank">
             <i class="fab fa-facebook-f"></i>
           </a>
 
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{route('movies.show', $movie['id'])}}" target="_blank">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{route('tv.show', $movie['id'])}}" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
 
-          <a href="https://api.whatsapp.com/send?text={{route('movies.show', $movie['id'])}}" target="_blank">
+          <a href="https://api.whatsapp.com/send?text={{route('tv.show', $movie['id'])}}" target="_blank">
             <i class="fab fa-whatsapp"></i>
           </a>
 

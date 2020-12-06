@@ -42,7 +42,7 @@ class SearchViewModel extends ViewModel
                 : 'https://via.placeholder.com/300x450',
           'title' => $title
         ])->only([
-            'poster_path', 'id', 'title'
+            'poster_path', 'id', 'title', 'media_type'
         ]);
 
       });

@@ -43,12 +43,18 @@ class AuthorViewModel extends ViewModel
                 $title = 'Untitled';
             }
 
+            $url = '';
+            if($movie['media_type'] == 'movie'){
+                $url = route('movies.show', $movie['id']);
+            }elseif($movie['media_type'] == 'tv'){
+                $url = route('tv.show', $movie['id']);
+            }
             return collect($movie)->merge([
                 'poster_path' => $movie['poster_path']
                     ? 'https://image.tmdb.org/t/p/w185'.$movie['poster_path']
                     : 'https://via.placeholder.com/185x278',
                 'title' => $title,
-                'linkToPage' => route('movies.show', $movie['id'])
+                'linkToPage' => $url
             ])->only([
                 'poster_path', 'title', 'id', 'media_type', 'linkToPage',
             ]);
@@ -77,12 +83,19 @@ class AuthorViewModel extends ViewModel
                 $title = 'Untitled';
             }
 
+            $url = '';
+            if($movie['media_type'] == 'movie'){
+                $url = route('movies.show', $movie['id']);
+            }elseif($movie['media_type'] == 'tv'){
+                $url = route('tv.show', $movie['id']);
+            }
+
             return collect($movie)->merge([
                 'release_date' => $releaseDate,
                 'release_year' => isset($releaseDate) ? Carbon::parse($releaseDate)->format('Y') : 'Future',
                 'title' => $title,
                 'character' => isset($movie['character']) ? $movie['character'] : '',
-                'linkToPage' => route('movies.show', $movie['id']),
+                'linkToPage' => $url,
             ])->only([
                 'release_date', 'release_year', 'title', 'character', 'linkToPage',
             ]);

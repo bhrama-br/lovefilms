@@ -17,7 +17,6 @@ class SearchController extends Controller
         $search = Http::withToken(config('services.tmdb.token'))
                             ->get('https://api.themoviedb.org/3/search/multi?query='.$search)
                             ->json()['results'];
-
         $viewModel = new SearchViewModel(
             $search
         );
