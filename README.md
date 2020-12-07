@@ -1,5 +1,5 @@
 # Love Films
-Demo: https://lovefilms.herokuapp.com/
+Demo: http://lovefilms.herokuapp.com/
 
 Top Films and search author and film.
 
