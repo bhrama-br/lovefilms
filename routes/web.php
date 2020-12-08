@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TvController;
 
+use App\Http\Controllers\GeneratePPT;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,19 +23,6 @@ Route::get('/', [MoviesController::class, 'index'])->name('index');
 Route::get('/movies/{movie}', [MoviesController::class, 'show'])->name('movies.show');
 Route::get('/author/{author}', [AuthorController::class, 'show'])->name('author.show');
 Route::get('/tv/{id}', [TvController::class, 'show'])->name('tv.show');
-
-
 Route::get('/search/{search}', [SearchController::class, 'index'])->name('search.index');
 
-
-
-
-// Route::get('/', function () {
-//     return view('index');
-// })->name('index');
-
-
-
-// Route::get('/show', function () {
-//     return view('movies/show');
-// })->name('movies.show');
+Route::get('generateppt/{id}', [GeneratePPT::class, 'generateppt'])->name('export');

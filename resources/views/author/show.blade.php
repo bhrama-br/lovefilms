@@ -20,7 +20,7 @@
 
         </div>
         <div class="col-md-6 text-md-right text-center">
-          <a href="#" class="btn btn-primary btn-love">
+          <a href="{{ route('export', $author['id'])}}" class="btn btn-primary btn-love">
             Export PPT
           </a>
         </div>
