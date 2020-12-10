@@ -9,7 +9,7 @@ class TvController extends Controller
     
     public function show($id)
     {
-        // Get Movie select
+        // Buscar series por id.
         $movie = Http::withToken(config('services.tmdb.token'))
                             ->get('https://api.themoviedb.org/3/tv/'.$id.'?append_to_response=credits,videos,images')
                             ->json();

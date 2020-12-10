@@ -8,7 +8,6 @@ use Spatie\ViewModels\ViewModel;
 class AuthorViewModel extends ViewModel
 {
     public $author;
-
     public $credits;
 
     public function __construct($author, $credits)
@@ -19,6 +18,7 @@ class AuthorViewModel extends ViewModel
 
     public function author()
     {
+        // Trabalhando para retornar coleção para view
         return collect($this->author)->merge([
             'birthday' => Carbon::parse($this->author['birthday'])->format('d M, Y'),
             'age' => Carbon::parse($this->author['birthday'])->age,
@@ -33,7 +33,7 @@ class AuthorViewModel extends ViewModel
     public function knownForMovies()
     {
         $castMovies = collect($this->credits)->get('cast');
-
+        // Trabalhando para retornar coleção para view
         return collect($castMovies)->sortByDesc('popularity')->take(4)->map(function($movie) {
             if (isset($movie['title'])) {
                 $title = $movie['title'];
@@ -65,7 +65,7 @@ class AuthorViewModel extends ViewModel
     public function credits()
     {
         $castMovies = collect($this->credits)->get('cast');
-
+        // Trabalhando para retornar coleção para view
         return collect($castMovies)->map(function($movie) {
             if (isset($movie['release_date'])) {
                 $releaseDate = $movie['release_date'];

@@ -22,10 +22,12 @@ use PhpOffice\PhpPresentation\Style\Color;
 class GeneratePPT extends Controller
 {
     public function generateppt($id){
+        // Requisição Pesquisar id do Autor
         $author = Http::withToken(config('services.tmdb.token'))
                             ->get('https://api.themoviedb.org/3/person/'.$id)
                             ->json();
 
+        // Requisição Pesquisar id do Autor e retornar Creditos
         $credits = Http::withToken(config('services.tmdb.token'))
             ->get('https://api.themoviedb.org/3/person/'.$id.'/combined_credits')
             ->json();

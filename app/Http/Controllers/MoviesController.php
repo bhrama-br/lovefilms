@@ -10,19 +10,13 @@ use App\ViewModels\MovieViewModel;
 
 class MoviesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    
     public function index()
     {   
-        // Get all Movies
+        // Retornar todos filmes da API
         $moviesAll = Http::withToken(config('services.tmdb.token'))
                             ->get('https://api.themoviedb.org/3/movie/popular')
                             ->json()['results'];
-        // Get all Genres 
+        // Retornar todos generos de filmes
         $genres = Http::withToken(config('services.tmdb.token'))
                             ->get('https://api.themoviedb.org/3/genre/movie/list')
                             ->json()['genres'];
@@ -36,16 +30,11 @@ class MoviesController extends Controller
         return view('movies/index', $viewModel);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show($id)
     {
 
-        // Get Movie select
+        // Retornar filme
         $movie = Http::withToken(config('services.tmdb.token'))
                             ->get('https://api.themoviedb.org/3/movie/'.$id.'?append_to_response=credits,videos,images')
                             ->json();

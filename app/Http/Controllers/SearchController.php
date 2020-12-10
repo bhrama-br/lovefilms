@@ -7,13 +7,10 @@ use App\ViewModels\SearchViewModel;
 
 class SearchController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index($search)
     {
+        // Pesquisar filmes ou autor
         $search = Http::withToken(config('services.tmdb.token'))
                             ->get('https://api.themoviedb.org/3/search/multi?query='.$search)
                             ->json()['results'];

@@ -21,13 +21,14 @@ class MoviesViewModel extends ViewModel
     }
 
     public function genres(){
+        // Trabalhando para retornar coleção para view
         return collect($this->genres)->mapWithKeys(function ($genre) {
             return [$genre['id'] => $genre['name']];
         });
     }
 
     private function formatMovies($movies)
-    {
+    {   // Trabalhando para retornar coleção para view
         return collect($movies)->map(function($movie) {
             $genresFormatted = collect($movie['genre_ids'])->mapWithKeys(function($value) {
                 return [$value => $this->genres()->get($value)];

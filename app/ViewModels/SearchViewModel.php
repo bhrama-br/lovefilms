@@ -20,6 +20,7 @@ class SearchViewModel extends ViewModel
 
   private function formatSearch($search)
   {
+      // Trabalhando para retornar coleção para view
       return collect($search)->map(function($s) {
 
         $img = '';
